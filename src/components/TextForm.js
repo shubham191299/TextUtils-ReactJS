@@ -44,7 +44,7 @@ export default function TextForm(props) {
     <>
       <div className="container">
         <div className="form-floating">
-          <h1>Enter your text below</h1>
+          <h1>{props.heading}</h1>
           <textarea
             className="form-control"
             value={text}
@@ -104,8 +104,9 @@ export default function TextForm(props) {
 }
 
 TextForm.propTypes = {
-  textArea: PropTypes.object.isRequired,
-  myStyle: PropTypes.object.isRequired,
+    heading: PropTypes.string.isRequired,
+    textArea: PropTypes.object.isRequired,
+    myStyle: PropTypes.object.isRequired,
 };
 
 TextForm.defaultProps = {
@@ -122,4 +123,5 @@ TextForm.defaultProps = {
     padding: "5px",
     boxShadow: "1px 1px 5px black",
   },
+  heading: "Enter your text below to analyze !!",
 };

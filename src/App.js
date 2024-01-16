@@ -117,7 +117,7 @@ function App() {
       />
       <Alert alert={alert} />
       <TextForm
-          heading="Enter your text below to analyze !!"
+          heading="Enter Your Text Below To Analyze !!"
           textArea={textArea}
           myStyle={myStyle}
           showAlert={showAlert}
