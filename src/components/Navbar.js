@@ -5,7 +5,7 @@ export default function Navbar(props) {
   return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme={props.theme}>
             <div className="container-fluid">
-                <img src='/logo192x192.png' alt='logo' width='25' height='23' className='mx-2'/>
+                <img src={process.env.PUBLIC_URL + '/logo192x192.png'} alt='logo' width='25' height='23' className='mx-2'/>
                 <a className="navbar-brand" href="#">
                 {props.title}
                 </a>
