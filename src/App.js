@@ -14,7 +14,7 @@ function App() {
     boxShadow: "1px 1px 5px black",
   });
   const [textArea, setTextArea] = useState({
-    height: "100px",
+    height: "200px",
     color: "black",
     backgroundColor: "white",
     boxShadow: "1px 1px 5px black",
@@ -41,7 +41,7 @@ function App() {
         boxShadow: "1px 1px 5px white",
       });
       setTextArea({
-        height: "100px",
+        height: "200px",
         color: "white",
         backgroundColor: "#2b3035",
         boxShadow: "1px 1px 5px white",
@@ -60,7 +60,7 @@ function App() {
         boxShadow: "1px 1px 5px black",
       });
       setTextArea({
-        height: "100px",
+        height: "200px",
         color: "black",
         backgroundColor: "white",
         boxShadow: "1px 1px 5px black",

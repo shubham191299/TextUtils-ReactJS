@@ -111,7 +111,7 @@ TextForm.propTypes = {
 
 TextForm.defaultProps = {
   textArea: {
-    height: "100px",
+    height: "200px",
     color: "black",
     backgroundColor: "white",
     boxShadow: "1px 1px 5px black",
