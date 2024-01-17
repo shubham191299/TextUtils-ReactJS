@@ -44,46 +44,46 @@ export default function TextForm(props) {
     <>
       <div className="container">
         <div className="form-floating">
-          <h1>{props.heading}</h1>
+          <h1 className="mb-3" style={{fontSize: '36px'}}>{props.heading}</h1>
           <textarea
-            className="form-control"
+            className="form-control mb-2"
             value={text}
             onChange={handlerOnChange}
             id="myBox"
             style={props.textArea}
           ></textarea>
-          <button className="btn btn-primary my-3" onClick={handlerUpClick}>
+          <button disabled={text.length===0} className="btn btn-primary my-1 mx-1" onClick={handlerUpClick}>
             Upper Case
           </button>
-          <button
-            className="btn btn-primary my-3 mx-1"
+          <button disabled={text.length===0}
+            className="btn btn-primary my-1 mx-1"
             onClick={handlerLoClick}
           >
             Lower Case
           </button>
-          <button className="btn btn-primary my-3" onClick={handlerClearClick}>
+          <button disabled={text.length===0} className="btn btn-primary my-1 mx-1" onClick={handlerClearClick}>
             Clear Text
           </button>
-          <button
-            className="btn btn-primary my-3 mx-1"
+          <button disabled={text.length===0}
+            className="btn btn-primary my-1 mx-1"
             onClick={handlerCopyToClip}
           >
             Copy Text
           </button>
-          <button
-            className="btn btn-primary my-3"
+          <button disabled={text.length===0}
+            className="btn btn-primary my-1 mx-1"
             onClick={handlerRemoveExtraSpaces}
           >
             Remove Extra Spaces
           </button>
-          <button
-            className="btn btn-primary my-3 mx-1"
+          <button disabled={text.length===0}
+            className="btn btn-primary my-1 mx-1"
             onClick={handlerRemoveAllExtraSpaces}
           >
             Remove All Extra Spaces
           </button>
         </div>
-        <div style={props.myStyle}>
+        <div style={props.myStyle} className="mt-2">
           <h2>Your Summary</h2>
           <p>
             {text === "" ? 0 : text.trim().split(/\s+/).length} Words and{" "}
@@ -96,7 +96,7 @@ export default function TextForm(props) {
         </div>
         <div className="my-3" style={props.myStyle}>
           <h2>Preview</h2>
-          <p>{text}</p>
+          <p>{text.length>0?text:"Enter something to preview !!"}</p>
         </div>
       </div>
     </>
